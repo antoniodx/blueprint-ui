@@ -10,7 +10,7 @@ export default function App() {
 
       <div className="button-group">
         <Button label="Explore Components" variant="primary" />
-        <Button label="View Foundations" variant="secondary" />
+        <Button label="View Foundations" variant="secondary" disabled />
       </div>
     </main>
   );
