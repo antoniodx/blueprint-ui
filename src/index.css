@@ -1,10 +1,59 @@
 
 
+
+
 :root {
+  /* Blueprint UI — Brand Colors */
+
+  --color-primary: #4C8FB3;
+  --color-primary-dark: #35637C;
+  --color-primary-hover: #67A0BE;
+  --color-primary-active: #0A9BEF;
+  --color-primary-disabled: #9BB1BD;
+
+  /* Neutral Colors */
+
+  --color-text: #252225;
+  --color-text-muted: #696368;
+  --color-surface: #F6F4F1;
+
+  /* Global Styles */
+
   font-family: Inter, Arial, sans-serif;
-  background: #F6F4F1;
-  color: #252225;
+  background: var(--color-surface);
+  color: var(--color-text);
+
+
+  /* Spacing Tokens */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Corner Radius Tokens */
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Semantic Tokens — Buttons */
+
+  --button-primary-bg: var(--color-primary);
+  --button-primary-bg-hover: var(--color-primary-hover);
+  --button-primary-text: #FFFFFF;
+
+  --button-secondary-text: var(--color-primary-dark);
+  --button-secondary-border: var(--color-primary-dark);
+
+  --button-radius: var(--radius-lg);
+  --button-padding-y: var(--space-4);
+  --button-padding-x: var(--space-6);
 }
+
 
 * {
   box-sizing: border-box;
@@ -41,30 +90,37 @@ p {
   flex-wrap: wrap;
 }
 
+
 .button-group button {
-  padding: 16px 24px;
-  border-radius: 12px;
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-lg);
   font-size: 16px;
   cursor: pointer;
   font-family: inherit;
 }
 
-.button-group .primary {
-  background: #870F19;
-  color: white;
-  border: 1px solid #870F19;
-}
 
-.button-group .secondary {
-  background: transparent;
-  color: #870F19;
-  border: 1px solid #870F19;
+/* Primary Button */
+
+.button-group .primary {
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  border: 2px solid var(--button-primary-bg);
 }
 
 .button-group .primary:hover {
-  background: #A51926;
+  background: var(--button-primary-bg-hover);
+  border-color: var(--button-primary-bg-hover);
+}
+
+/* Secondary Button */
+
+.button-group .secondary {
+  background: transparent;
+  color: var(--button-secondary-text);
+  border: 2px solid var(--button-secondary-border);
 }
 
 .button-group .secondary:hover {
-  background: #F0E3E4;
-}
+  background: #E5F0F6;
+
