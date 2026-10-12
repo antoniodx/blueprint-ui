@@ -52,6 +52,11 @@
   --button-radius: var(--radius-lg);
   --button-padding-y: var(--space-4);
   --button-padding-x: var(--space-6);
+
+  /* Focus Tokens */
+  --color-focus-ring: #35637C;
+
+
 }
 
 
@@ -123,4 +128,32 @@ p {
 
 .button-group .secondary:hover {
   background: #E5F0F6;
+}
+
+
+.button-group .primary:active {
+  background: var(--color-primary-active);
+  border-color: var(--color-primary-active);
+}
+
+
+/* Disabled Button State */
+
+.button-group button:disabled {
+  background: var(--color-primary-disabled);
+  border: 2px solid var(--color-primary-disabled);
+  color: #252225;
+  cursor: not-allowed;
+}
+
+
+/* Keyboard Focus State */
+
+.button-group button:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 4px;
+}
+
+
+
 
