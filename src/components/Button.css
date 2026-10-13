@@ -55,3 +55,20 @@
   outline: 2px solid var(--color-focus-ring);
   outline-offset: 4px;
 }
+
+/* Button Sizes */
+
+.button.small {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.button.medium {
+  padding: var(--button-padding-y) var(--button-padding-x);
+  font-size: 16px;
+}
+
+.button.large {
+  padding: 20px 32px;
+  font-size: 18px;
+}
