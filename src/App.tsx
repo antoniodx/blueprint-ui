@@ -2,10 +2,13 @@
 
 import Button from './components/Button';
 import { useState } from 'react';
+import Toggle from './components/Toggle';
+
 
 export default function App() {
 
 const [showWelcome, setShowWelcome] = useState(false);
+const [notificationsEnabled, setNotificationsEnabled] = useState(false);
 
   return (
     <main>
@@ -26,6 +29,13 @@ const [showWelcome, setShowWelcome] = useState(false);
 {showWelcome && (
   <p>Welcome to Blueprint UI! Let's explore.</p>
 )}
+   <Toggle label="Notifications" 
+   checked={notificationsEnabled}
+   onChange={setNotificationsEnabled}/>
+   <p>
+    Notifications are {notificationsEnabled ? 'On' : 'Off'}
+   </p>
+
     </main>
   );
 }

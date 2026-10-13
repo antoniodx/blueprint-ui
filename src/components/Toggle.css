@@ -1,0 +1,85 @@
+
+/* Toggle Layout */
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  cursor: pointer;
+}
+
+/* Hide the native checkbox visually */
+
+.toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+/* Switch Track */
+
+.toggle-track {
+  display: flex;
+  align-items: center;
+  width: 54px;
+  height: 32px;
+  padding: 3px;
+  border: 2px solid var(--color-primary-dark);
+  border-radius: 999px;
+  background: var(--color-primary-disabled);
+  transition: background 200ms ease;
+}
+
+/* Switch Thumb */
+
+.toggle-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 200ms ease;
+}
+
+/* Checked State */
+
+.toggle input:checked + .toggle-track {
+  background: var(--color-primary);
+}
+
+/* Move Thumb When Checked */
+
+.toggle input:checked + .toggle-track .toggle-thumb {
+  transform: translateX(22px);
+}
+
+/* Keyboard Focus */
+
+.toggle input:focus-visible + .toggle-track {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 4px;
+}
+
+/* Toggle Label */
+
+.toggle-label {
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+/* Disabled Toggle */
+
+.toggle:has(input:disabled) {
+  cursor: not-allowed;
+}
+
+.toggle input:disabled + .toggle-track {
+  background: var(--color-primary-disabled);
+  border: 2px solid var(--color-primary-disabled);
+  opacity: 0.6;
+}
+
+.toggle input:disabled ~ .toggle-label {
+  color: var(--color-text-muted);
+  opacity: 0.6;
+}
