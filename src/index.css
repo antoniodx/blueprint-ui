@@ -96,63 +96,7 @@ p {
 }
 
 
-.button-group button {
-  padding: var(--space-4) var(--space-6);
-  border-radius: var(--radius-lg);
-  font-size: 16px;
-  cursor: pointer;
-  font-family: inherit;
-}
 
-
-/* Primary Button */
-
-.button-group .primary {
-  background: var(--button-primary-bg);
-  color: var(--button-primary-text);
-  border: 2px solid var(--button-primary-bg);
-}
-
-.button-group .primary:hover {
-  background: var(--button-primary-bg-hover);
-  border-color: var(--button-primary-bg-hover);
-}
-
-/* Secondary Button */
-
-.button-group .secondary {
-  background: transparent;
-  color: var(--button-secondary-text);
-  border: 2px solid var(--button-secondary-border);
-}
-
-.button-group .secondary:hover {
-  background: #E5F0F6;
-}
-
-
-.button-group .primary:active {
-  background: var(--color-primary-active);
-  border-color: var(--color-primary-active);
-}
-
-
-/* Disabled Button State */
-
-.button-group button:disabled {
-  background: var(--color-primary-disabled);
-  border: 2px solid var(--color-primary-disabled);
-  color: #252225;
-  cursor: not-allowed;
-}
-
-
-/* Keyboard Focus State */
-
-.button-group button:focus-visible {
-  outline: 2px solid var(--color-focus-ring);
-  outline-offset: 4px;
-}
 
 
 

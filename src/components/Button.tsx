@@ -1,5 +1,7 @@
 
 
+import './Button.css';
+
 
 type ButtonProps = {
   label: string;
@@ -11,7 +13,9 @@ type ButtonProps = {
 export default function Button(props: ButtonProps) {
   return (
     <button 
-    className={props.variant} 
+    
+    className={`button ${props.variant}`}
+ 
     disabled={props.disabled}>
       {props.label}
       
