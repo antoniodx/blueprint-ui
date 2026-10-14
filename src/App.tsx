@@ -4,6 +4,7 @@ import Button from './components/Button';
 import { useState } from 'react';
 import Toggle from './components/Toggle';
 import Input from './components/Input';
+import SettingsPanel from './components/SettingsPanel';
 
 
 
@@ -50,6 +51,7 @@ const [nameTouched, setNameTouched] = useState(false);
     onBlur={() => setNameTouched(true)}
      />
  
+    <SettingsPanel />
     </main>
   );
  }

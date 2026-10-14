@@ -1,0 +1,6 @@
+.settings-success {
+  color: var(--color-success);
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 8px;
+}
