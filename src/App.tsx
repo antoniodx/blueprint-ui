@@ -3,12 +3,16 @@
 import Button from './components/Button';
 import { useState } from 'react';
 import Toggle from './components/Toggle';
+import Input from './components/Input';
+
 
 
 export default function App() {
 
 const [showWelcome, setShowWelcome] = useState(false);
 const [notificationsEnabled, setNotificationsEnabled] = useState(false);
+const [fullName, setFullName] = useState('');
+const [nameTouched, setNameTouched] = useState(false);
 
   return (
     <main>
@@ -28,7 +32,7 @@ const [notificationsEnabled, setNotificationsEnabled] = useState(false);
 
 {showWelcome && (
   <p>Welcome to Blueprint UI! Let's explore.</p>
-)}
+  )}
    <Toggle label="Notifications" 
    checked={notificationsEnabled}
    onChange={setNotificationsEnabled}/>
@@ -36,6 +40,16 @@ const [notificationsEnabled, setNotificationsEnabled] = useState(false);
     Notifications are {notificationsEnabled ? 'On' : 'Off'}
    </p>
 
+   <Input
+    label="Full name"
+    placeholder="Enter your name"
+    error={nameTouched && fullName.trim() === ''}
+    errorMessage="Full name is required"
+    value={fullName}
+    onChange={setFullName}
+    onBlur={() => setNameTouched(true)}
+     />
+ 
     </main>
   );
-}
+ }
