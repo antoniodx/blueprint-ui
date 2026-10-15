@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Toggle from './components/Toggle';
 import Input from './components/Input';
 import SettingsPanel from './components/SettingsPanel';
+import Card from './components/Card';
 
 
 
@@ -59,9 +60,49 @@ const [nameTouched, setNameTouched] = useState(false);
     value={fullName}
     onChange={setFullName}
     onBlur={() => setNameTouched(true)}
-     />
- </div>
-<SettingsPanel />
+ />
+    
+    </div>
+    <SettingsPanel 
+ />
+
+
+
+<section className="card-showcase">
+  <div className="showcase-header">
+    <h2>Card Components</h2>
+    <p>Explore the different Card variants.</p>
+  </div>
+
+  <div className="card-showcase-grid">
+    <Card
+      title="Default"
+      description="Standard container"
+      variant="default"
+    >
+      <p>For everyday content and settings.</p>
+    </Card>
+
+    <Card
+      title="Subtle"
+      description="Soft background"
+      variant="subtle"
+    >
+      <p>For secondary content and grouping.</p>
+    </Card>
+
+    <Card
+      title="Outlined"
+      description="Stronger emphasis"
+      variant="outlined"
+    >
+      <p>For content that needs more attention.</p>
+    </Card>
+  </div>
+</section>
+
+
+
     </main>
   );
  }

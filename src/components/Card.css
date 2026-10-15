@@ -1,0 +1,64 @@
+
+.bp-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+
+  width: 100%;
+  max-width: 480px;
+  box-sizing: border-box;
+
+  padding: var(--space-6);
+  border: 1px solid #D6D2D1;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+}
+
+.bp-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.bp-card-header h2,
+.bp-card-header p {
+  margin: 0;
+}
+
+.bp-card-header h2 {
+  font-family: var(--font-body);
+  font-size: var(--text-h3);
+  line-height: var(--line-h3);
+  font-weight: 600;
+}
+
+.bp-card-header p {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--line-body);
+  font-weight: 400;
+  color: var(--color-text-secondary, #666666);
+}
+
+.bp-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+
+.bp-card--default {
+  background-color: #FFFFFF;
+  border: 1px solid #D6D2D1;
+}
+
+.bp-card--subtle {
+  background-color: #F5F7F8;
+  border: 1px solid transparent;
+}
+
+.bp-card--outlined {
+  background-color: #FFFFFF;
+  border: 2px solid var(--color-primary, #4C8FB3);
+}

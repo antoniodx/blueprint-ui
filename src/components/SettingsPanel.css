@@ -45,3 +45,27 @@
   align-items: flex-start;
   gap: 16px;
 }
+
+/* Settings Panel heading */
+.settings-header h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  line-height: var(--line-h2);
+  font-weight: 600;
+}
+
+/* Settings Panel description */
+.settings-header p {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--line-body);
+  font-weight: 400;
+}
+
+/* Notification status */
+.settings-toggle-group p {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--line-body);
+  font-weight: 400;
+}

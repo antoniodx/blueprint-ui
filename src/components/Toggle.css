@@ -63,7 +63,10 @@
 /* Toggle Label */
 
 .toggle-label {
-  font-size: 16px;
+  font-family: var(--font-control);
+  font-size: var(--text-control);
+  line-height: var(--line-control);
+  font-weight: var(--weight-control);
   color: var(--color-text);
 }
 
