@@ -306,6 +306,47 @@ p {
 }
 
 
+.app-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.app-header p {
+  margin: 0;
+}
+
+.component-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: 100%;
+  margin-top: var(--space-8);
+}
+
+.component-dashboard-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.component-dashboard-header h2,
+.component-dashboard-header p {
+  margin: 0;
+}
+
+.component-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+@media (max-width: 900px) {
+  .component-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 

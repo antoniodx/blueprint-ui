@@ -1,108 +1,97 @@
 
+import { useState } from 'react';
 
 import Button from './components/Button';
-import { useState } from 'react';
 import Toggle from './components/Toggle';
 import Input from './components/Input';
 import SettingsPanel from './components/SettingsPanel';
 import Card from './components/Card';
-
-
+import ComponentSection from './components/ComponentSection';
 
 export default function App() {
-
-const [showWelcome, setShowWelcome] = useState(false);
-const [notificationsEnabled, setNotificationsEnabled] = useState(false);
-const [fullName, setFullName] = useState('');
-const [nameTouched, setNameTouched] = useState(false);
+  const [notificationsEnabled, setNotificationsEnabled] = useState(false);
+  const [fullName, setFullName] = useState('');
+  const [nameTouched, setNameTouched] = useState(false);
 
   return (
     <main>
-      <h1>Blueprint UI</h1>
-      <p>Design with intention. Build with precision.</p>
+      <header className="app-header">
+        <h1>Blueprint UI</h1>
+        <p>Design with intention. Build with precision.</p>
+      </header>
 
-      <div className="button-group">
- 
-<Button label="Explore Components" 
-        variant="primary"  
-        onClick={() => setShowWelcome(!showWelcome)}
- />
+      <section className="component-dashboard">
+        <div className="component-dashboard-header">
+          <h2>Component Library</h2>
+          <p>Explore reusable UI elements.</p>
+        </div>
 
-<Button label="View Foundations" variant="secondary" disabled />
+        <div className="component-dashboard-grid">
+          <ComponentSection
+            title="Buttons"
+            description="Actions and states"
+          >
+            <Button
+              label="Primary"
+              variant="primary"
+              onClick={() => alert('Primary clicked')}
+            />
 
-</div>
+            <Button
+              label="Secondary"
+              variant="secondary"
+              onClick={() => alert('Secondary clicked')}
+            />
+          </ComponentSection>
 
-{showWelcome && (
-  <p>Welcome to Blueprint UI! Let's explore.</p>
-  )}
-   <hr className="component-divider" />
-   <div className="component-stack">
-   
-   <div className="notification-group">
-    <Toggle
-    label="Notifications"
-    checked={notificationsEnabled}
-    onChange={setNotificationsEnabled}
-    />
+          <ComponentSection
+            title="Toggles"
+            description="Binary controls"
+          >
+            <Toggle
+              label="Notifications"
+              checked={notificationsEnabled}
+              onChange={setNotificationsEnabled}
+            />
+          </ComponentSection>
 
-    <p>
-    Notifications are {notificationsEnabled ? 'On' : 'Off'}
-    </p>
-</div>
+          <ComponentSection
+            title="Inputs"
+            description="Forms and validation"
+          >
+            <Input
+              label="Full name"
+              placeholder="Enter your name"
+              value={fullName}
+              onChange={setFullName}
+              onBlur={() => setNameTouched(true)}
+              error={nameTouched && fullName.trim() === ''}
+              errorMessage="Full name is required"
+            />
+          </ComponentSection>
 
-<hr className="component-divider" />
+          <ComponentSection
+            title="Cards"
+            description="Content containers"
+          >
+            <Card
+              title="Default Card"
+              description="Reusable surface"
+              variant="default"
+            >
+              <p>Consistent content structure.</p>
+            </Card>
+          </ComponentSection>
 
-   <Input
-    label="Full name"
-    placeholder="Enter your name"
-    error={nameTouched && fullName.trim() === ''}
-    errorMessage="Full name is required"
-    value={fullName}
-    onChange={setFullName}
-    onBlur={() => setNameTouched(true)}
- />
-    
-    </div>
-    <SettingsPanel 
- />
-
-
-
-<section className="card-showcase">
-  <div className="showcase-header">
-    <h2>Card Components</h2>
-    <p>Explore the different Card variants.</p>
-  </div>
-
-  <div className="card-showcase-grid">
-    <Card
-      title="Default"
-      description="Standard container"
-      variant="default"
-    >
-      <p>For everyday content and settings.</p>
-    </Card>
-
-    <Card
-      title="Subtle"
-      description="Soft background"
-      variant="subtle"
-    >
-      <p>For secondary content and grouping.</p>
-    </Card>
-
-    <Card
-      title="Outlined"
-      description="Stronger emphasis"
-      variant="outlined"
-    >
-      <p>For content that needs more attention.</p>
-    </Card>
-  </div>
-</section>
-
-
-
+          <ComponentSection
+            title="Settings Panel"
+            description="Composed components"
+            fullWidth
+          >
+            <SettingsPanel />
+          </ComponentSection>
+        </div>
+      </section>
     </main>
   );
- }
+}
