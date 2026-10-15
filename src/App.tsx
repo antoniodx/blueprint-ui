@@ -61,7 +61,6 @@ const [nameTouched, setNameTouched] = useState(false);
     onBlur={() => setNameTouched(true)}
      />
  </div>
-    <p>TEST: Settings Panel should appear below this</p>
 <SettingsPanel />
     </main>
   );

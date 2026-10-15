@@ -16,7 +16,7 @@ export default function SettingsPanel() {
      
      const [isSaved, setIsSaved] = useState(false);
 
-console.log('SettingsPanel is rendering');
+
 
      return (
    
