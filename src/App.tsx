@@ -34,12 +34,22 @@ const [nameTouched, setNameTouched] = useState(false);
 {showWelcome && (
   <p>Welcome to Blueprint UI! Let's explore.</p>
   )}
-   <Toggle label="Notifications" 
-   checked={notificationsEnabled}
-   onChange={setNotificationsEnabled}/>
-   <p>
+   <hr className="component-divider" />
+   <div className="component-stack">
+   
+   <div className="notification-group">
+    <Toggle
+    label="Notifications"
+    checked={notificationsEnabled}
+    onChange={setNotificationsEnabled}
+    />
+
+    <p>
     Notifications are {notificationsEnabled ? 'On' : 'Off'}
-   </p>
+    </p>
+</div>
+
+<hr className="component-divider" />
 
    <Input
     label="Full name"
@@ -50,8 +60,9 @@ const [nameTouched, setNameTouched] = useState(false);
     onChange={setFullName}
     onBlur={() => setNameTouched(true)}
      />
- 
-    <SettingsPanel />
+ </div>
+    <p>TEST: Settings Panel should appear below this</p>
+<SettingsPanel />
     </main>
   );
  }

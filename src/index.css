@@ -76,7 +76,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 h1 {
@@ -97,7 +97,29 @@ p {
   flex-wrap: wrap;
 }
 
+.component-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
 
+.component-divider {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #D6D2D1;
+  margin: 16px 0;
+}
+
+.notification-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.notification-group p {
+  margin: 0;
+}
 
 
 
