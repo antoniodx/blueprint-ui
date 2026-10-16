@@ -1,32 +1,68 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-Currently, two official plugins are available:
+# Blueprint UI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Design with intention. Build with precision.**
 
-## React Compiler
+Blueprint UI is a growing React component library focused on visual consistency, accessibility, and reusable design patterns.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The project explores how a design system moves from visual foundations into functional, interactive components.
 
-## Expanding the Oxlint configuration
+## Built With
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- React
+- TypeScript
+- Vite
+- CSS
+- Inter and Outfit typography
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Components
+
+| Component | Features |
+|-----------|----------|
+| Button | Primary, secondary, sizes, disabled states |
+| Toggle | Interactive on/off control |
+| Input | Validation, error states, disabled states |
+| Card | Default, subtle, outlined variants |
+| SettingsPanel | Composed components, persistent settings |
+| ComponentSection | Reusable documentation layout |
+
+## Design Foundations
+
+- Semantic color tokens
+- Spacing scale
+- Responsive typography
+- Consistent corner radii
+- Interactive states
+- Reusable component architecture
+
+## Getting Started
+
+Clone the repository and install dependencies:
+
+```bash
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local address displayed in your terminal.
+
+## Roadmap
+
+- [x] Week 1 — React and component foundations
+- [ ] Week 2 — Expo and mobile development
+- [ ] Week 3 — Design tokens and visual foundations
+- [ ] Week 4 — Component library expansion
+- [ ] Week 5 — Iconography
+- [ ] Week 6 — Motion and interaction
+- [ ] Week 7 — Integration and refinement
+- [ ] Week 8 — Documentation and portfolio presentation
+
+## Status
+
+Work in progress. Built as an eight-week design-to-development learning project.

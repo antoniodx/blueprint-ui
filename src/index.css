@@ -1,14 +1,14 @@
 
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600&display=swap');  
 
 
 :root {
 
- @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600&display=swap');
-  
   /* Font families */
-  --font-heading: 'Inter', sans-serif;
-  --font-body: 'Outfit', sans-serif;
+   --font-heading: 'Inter', sans-serif;
+   --font-body: 'Outfit', sans-serif;
+  
 
   /* Desktop typography */
   --text-h1: 40px;
@@ -129,6 +129,9 @@ p {
   font-family: var(--font-body);
   font-size: var(--text-body);
   line-height: var(--line-body);
+  font-weight: 400;
+  color: var(--color-text-muted);
+  margin: 0;
 }
 
 .caption {
@@ -223,93 +226,26 @@ h3 {
 }
 
 
-p {
-  font-size: 20px;
-  color: #696368;
-  margin: 20px 0 32px;
-}
 
-.button-group {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
 
-.component-stack {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
-}
 
-.component-divider {
-  width: 100%;
-  border: 0;
-  border-top: 1px solid #D6D2D1;
-  margin: 16px 0;
-}
 
-.notification-group {
+
+
+
+
+
+
+
+
+
+
+
+.app-header,
+.component-dashboard-header {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-.notification-group p {
-  margin: 0;
-}
-
-
-
-.card-showcase {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
-  width: 100%;
-  margin-top: var(--space-12);
-}
-
-.showcase-header {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-
-.showcase-header h2,
-.showcase-header p {
-  margin: 0;
-}
-
-.showcase-header h2 {
-  font-family: var(--font-heading);
-  font-size: var(--text-h2);
-  line-height: var(--line-h2);
-  font-weight: 600;
-}
-
-
-.card-showcase-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-4);
-}
-
-.card-showcase-grid .bp-card {
-  max-width: none;
-  min-width: 0;
-}
-
-@media (max-width: 900px) {
-  .card-showcase-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-.app-header {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-1);
 }
 
 .app-header p {
@@ -324,11 +260,6 @@ p {
   margin-top: var(--space-8);
 }
 
-.component-dashboard-header {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
 
 .component-dashboard-header h2,
 .component-dashboard-header p {
